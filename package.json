@@ -4,7 +4,7 @@
   "author": "redpelicans",
   "license": "MIT",
   "scripts": {
-    "test": "NODE_ENV=test jest",
+    "test": "NODE_ENV=development jest",
     "lint": "eslint src --color",
     "start": "NODE_ENV=development DEBUG=sdmx* nodemon --watch config --watch src --exec \"babel-node src\"",
     "build": "NODE_ENV=production babel src --out-dir dist/",
@@ -22,17 +22,21 @@
     "compression": "^1.7.0",
     "cors": "^2.8.4",
     "debug": "^3.0.1",
+    "enzyme": "^2.9.1",
     "eslint": "^4.6.1",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.3.0",
     "express": "^4.15.4",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.0",
     "mongodb": "^2.2.31",
     "morgan": "^1.8.2",
     "morgan-debug": "^2.0.0",
     "nodemon": "^1.12.0",
-    "ramda": "^0.24.1"
+    "ramda": "^0.24.1",
+    "should": "^13.0.1"
   },
   "devDependencies": {
     "jest": "^21.0.1"
@@ -62,7 +66,6 @@
       "jsx"
     ]
   },
-
   "babel": {
     "presets": [
       [
